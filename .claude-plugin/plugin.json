@@ -1,0 +1,9 @@
+{
+  "name": "design-md",
+  "version": "1.0.0",
+  "description": "Turn any website URL into a DESIGN.md design-system file (Google @google/design.md format, plus Motion, 3D and Tech Stack sections) so AI coding agents can build UI that matches the site.",
+  "author": { "name": "Ibad-10" },
+  "repository": "https://github.com/Ibad-10/design-md",
+  "license": "MIT",
+  "keywords": ["design-system", "design.md", "playwright", "ui", "skill"]
+}

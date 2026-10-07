@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>motion fixture</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+<style>
+  html { scroll-behavior: smooth; }
+  header { position: sticky; top: 0; background: #111; color: #fff; padding: 12px; }
+  .btn { background: #5e6ad2; color: #fff; padding: 8px 14px; border: 0; transition: background-color .2s ease; }
+  .btn:hover { background: #828fff; }
+  .spinner { width: 20px; height: 20px; background: red; animation: spin 1s linear infinite; }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+  .card { width: 100px; height: 40px; transition: transform .3s cubic-bezier(0.25, 0.1, 0.25, 1), opacity .3s ease; }
+  @keyframes dot-1 { to { opacity: 0; } }
+  @keyframes dot-2 { to { opacity: 0; } }
+  .stage { perspective: 800px; }
+  .stage > div { transform-style: preserve-3d; width: 50px; height: 50px; }
+</style>
+</head>
+<body>
+  <header>Header</header>
+  <canvas id="gl" width="600" height="400"></canvas>
+  <button class="btn">Get started</button>
+  <div class="spinner"></div>
+  <div data-aos="fade-up">Reveal</div>
+  <div class="card"></div>
+  <div class="stage"><div></div></div>
+  <video autoplay muted loop width="320" height="180"></video>
+  <div style="height: 2000px"></div>
+  <script>
+    window.gsap = {};
+    const gl = document.getElementById('gl').getContext('webgl');
+    gl.clearColor(0, 0, 0, 1); gl.clear(gl.COLOR_BUFFER_BIT);
+  </script>
+</body>
+</html>

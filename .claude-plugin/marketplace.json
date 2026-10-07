@@ -1,0 +1,12 @@
+{
+  "name": "design-md",
+  "owner": { "name": "Ibad-10" },
+  "description": "Claude Code plugin that turns any website URL into a DESIGN.md design-system file.",
+  "plugins": [
+    {
+      "name": "design-md",
+      "source": "./",
+      "description": "Turn any website URL into a DESIGN.md design-system file for AI coding agents."
+    }
+  ]
+}
